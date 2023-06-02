@@ -5,21 +5,21 @@ using namespace std;
 
 #define forn(i, a, b) for(int i = a; i < b; i++)
 
-void printSubset(vector<int>& subset) {
+void printSubset(vector<int> &subset) {
     forn(i, 0, subset.size()) {
         cout << subset[i] << " ";
     }
     cout << "\n";
 }
 
-void search(vector<int>& numbers, vector<int>& subset, int k) {
-    if(k == numbers.size()) {
+void search(vector<int> &numbers, vector<int> &subset, int k) {
+    if (k == numbers.size()) {
         printSubset(subset);
     } else {
         subset.push_back(numbers[k]);
-        search(numbers, subset, k+1);
+        search(numbers, subset, k + 1);
         subset.pop_back();
-        search(numbers, subset, k+1);
+        search(numbers, subset, k + 1);
     }
 }
 

@@ -14,21 +14,21 @@ struct point {
     }
 
     bool operator<(const point &p) {
-        if(x == p.x) return y < p.y;
+        if (x == p.x) return y < p.y;
         return x < p.x;
     }
 };
 
-bool compare(point a, point b){
-    if(a < b)
+bool compare(point a, point b) {
+    if (a < b)
         return 1;
-    else 
+    else
         return 0;
 }
 
 void sortingVector() {
-    vector<int> arr = {4,2,5,3,5,8,3};
-    
+    vector<int> arr = {4, 2, 5, 3, 5, 8, 3};
+
     // sort in increasing order
     sort(arr.begin(), arr.end());
     cout << "Sort vector in increasing order: ";
@@ -48,7 +48,7 @@ void sortingVector() {
 
 void sortingArray() {
     int n = 7; // array size
-    int arr[] = {4,2,5,3,5,8,3};
+    int arr[] = {4, 2, 5, 3, 5, 8, 3};
 
     sort(arr, arr + n);
     cout << "Sort array in increasing order: ";
@@ -67,9 +67,9 @@ void sortingString() {
 
 void sortingPairs() {
     vector<pair<int, int>> v;
-    v.push_back({1,5});
-    v.push_back({2,3});
-    v.push_back({1,2});
+    v.push_back({1, 5});
+    v.push_back({2, 3});
+    v.push_back({1, 2});
     sort(v.begin(), v.end());
 
     cout << "Sort vector of pairs in increasing order: ";
@@ -80,9 +80,9 @@ void sortingPairs() {
 
 void sortingTuples() {
     vector<tuple<int, int, int>> v;
-    v.push_back({2,1,4});
-    v.push_back({1,5,3});
-    v.push_back({2,1,3});
+    v.push_back({2, 1, 4});
+    v.push_back({1, 5, 3});
+    v.push_back({2, 1, 3});
     sort(v.begin(), v.end());
 
     cout << "Sort vector of tuples in increasing order: ";

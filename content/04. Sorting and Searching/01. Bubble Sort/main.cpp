@@ -10,9 +10,9 @@ void bubbleSort(vector<int> &arr) {
     size_t N = arr.size();
 
     forn (i, 0, N) {
-        forn (j, 0, N-1) {
-            if (arr[j] > arr[j+1]) {
-                swap(arr[j], arr[j+1]);
+        forn (j, 0, N - 1) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
             }
         }
     }

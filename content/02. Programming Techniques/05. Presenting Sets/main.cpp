@@ -20,12 +20,12 @@ void representSetsInInts() {
 
     cout << "Set S contains: ";
     forn(i, 0, 32) {
-        if(S & (1 << i)) cout << i << " ";
+        if (S & (1 << i)) cout << i << " ";
     }
 
     cout << "\nSet Z contains: ";
     forn(i, 0, 32) {
-        if(Z & (1 << i)) cout << i << " ";
+        if (Z & (1 << i)) cout << i << " ";
     }
 
     cout << "\n\nSet operations:\n";
@@ -33,25 +33,25 @@ void representSetsInInts() {
     cout << "S∪Z (Union) contains: ";
     int SUZ = S | Z;
     forn(i, 0, 32) {
-        if(SUZ & (1 << i)) cout << i << " ";
+        if (SUZ & (1 << i)) cout << i << " ";
     }
 
     cout << "\nS∩Z (Intersection) contains: ";
     int SNZ = S & Z;
     forn(i, 0, 32) {
-        if(SNZ & (1 << i)) cout << i << " ";
+        if (SNZ & (1 << i)) cout << i << " ";
     }
 
     cout << "\n¬S (Complement) contains: ";
     int NON_S = ~S;
     forn(i, 0, 32) {
-        if(NON_S & (1 << i)) cout << i << " ";
+        if (NON_S & (1 << i)) cout << i << " ";
     }
 
     cout << "\nS\\Z (Difference) contains: ";
     int S_diff_Z = S & ~Z;
     forn(i, 0, 32) {
-        if(S_diff_Z & (1 << i)) cout << i << " ";
+        if (S_diff_Z & (1 << i)) cout << i << " ";
     }
 }
 
@@ -71,12 +71,12 @@ void representSetsInBitsets() {
 
     cout << "Set S contains: ";
     forn(i, 0, S.size()) {
-        if(S[i] == 1) cout << i << " ";
+        if (S[i] == 1) cout << i << " ";
     }
 
     cout << "\nSet Z contains: ";
     forn(i, 0, Z.size()) {
-        if(Z[i] == 1) cout << i << " ";
+        if (Z[i] == 1) cout << i << " ";
     }
 
     cout << "\nNumber of elements in S: " << S.count() << "\n";
@@ -85,19 +85,19 @@ void representSetsInBitsets() {
     cout << "\nS∪Z (Union) contains: ";
     bitset<10> SUZ = S | Z;
     forn(i, 0, S.size()) {
-        if(SUZ[i] == 1) cout << i << " ";
+        if (SUZ[i] == 1) cout << i << " ";
     }
 
     cout << "\nS∩Z (Intersection) contains: ";
     bitset<10> SNZ = S & Z;
     forn(i, 0, S.size()) {
-        if(SNZ[i] == 1) cout << i << " ";
+        if (SNZ[i] == 1) cout << i << " ";
     }
 
     cout << "\nS^Z (XOR) contains: ";
     bitset<10> XOR = S ^ Z;
     forn(i, 0, S.size()) {
-        if(XOR[i] == 1) cout << i << " ";
+        if (XOR[i] == 1) cout << i << " ";
     }
 }
 

@@ -18,8 +18,8 @@ int main() {
     unordered_map<int, int> q;
 
     q[1] = q[2] = 0;
-    forn(i, 3, N+1) {
-        q[i] = q[i-1] + (2*i-1) * (i*i - 3*(i-1) - 1) - (i-1)*(i-2);
+    forn(i, 3, N + 1) {
+        q[i] = q[i - 1] + (2 * i - 1) * (i * i - 3 * (i - 1) - 1) - (i - 1) * (i - 2);
     }
 
     cout << q[N];

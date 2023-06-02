@@ -6,19 +6,19 @@ using namespace std;
 
 #define forn(i, a, b) for(int i = a; i < b; i++)
 
-void printPermutation(vector<int>& permutation) {
+void printPermutation(vector<int> &permutation) {
     forn(i, 0, permutation.size()) {
         cout << permutation[i] << " ";
     }
     cout << "\n";
 }
 
-void search(vector<int>& numbers, vector<int>& permutation, unordered_map<int, bool>& chosen) {
-    if(permutation.size() == numbers.size()) {
+void search(vector<int> &numbers, vector<int> &permutation, unordered_map<int, bool> &chosen) {
+    if (permutation.size() == numbers.size()) {
         printPermutation(permutation);
     } else {
         forn(i, 0, numbers.size()) {
-            if(chosen[numbers[i]]) continue;
+            if (chosen[numbers[i]]) continue;
 
             chosen[numbers[i]] = true;
             permutation.push_back(numbers[i]);

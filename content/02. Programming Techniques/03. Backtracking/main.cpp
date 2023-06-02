@@ -12,15 +12,15 @@ unordered_map<int, bool> diag2;
 int permCount = 0;
 
 void search(int y) {
-    if(y == N) {
+    if (y == N) {
         ++permCount;
     } else {
         forn(x, 0, N) {
-            if(col[x] || diag1[x + y] || diag2[x - y + N-1]) continue;
+            if (col[x] || diag1[x + y] || diag2[x - y + N - 1]) continue;
 
-            col[x] = diag1[x + y] = diag2[x - y + N-1] = true;
-            search(y+1);
-            col[x] = diag1[x + y] = diag2[x - y + N-1] = false;
+            col[x] = diag1[x + y] = diag2[x - y + N - 1] = true;
+            search(y + 1);
+            col[x] = diag1[x + y] = diag2[x - y + N - 1] = false;
         }
     }
 }

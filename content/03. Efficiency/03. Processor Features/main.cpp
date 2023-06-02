@@ -35,16 +35,16 @@ void parallel() {
 
     // Variant 1
     ll f1 = 1;
-    forn(i, 2, n+1) {
-        f1 = (f1*i) % M;
+    forn(i, 2, n + 1) {
+        f1 = (f1 * i) % M;
     }
 
     // Variant 2
     ll f2 = 1;
     ll f3 = 1;
-    for(int i = 1; i < n+1; i+=2) {
-        f2 = (f2*i) % M;
-        f3 = (f3*(i+1)) % M;
+    for (int i = 1; i < n + 1; i += 2) {
+        f2 = (f2 * i) % M;
+        f3 = (f3 * (i + 1)) % M;
     }
     ll f4 = f2 * f3;
 

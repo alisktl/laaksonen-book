@@ -8,12 +8,12 @@ using namespace std;
 void countingSort(vector<int> &arr) {
     int max = 0;
     forn (i, 0, arr.size()) {
-        if(arr[i] > max) {
+        if (arr[i] > max) {
             max = arr[i];
         }
     }
 
-    vector<int> count(max+1, 0);
+    vector<int> count(max + 1, 0);
 
     forn (i, 0, arr.size()) {
         count[arr[i]]++;
