@@ -5,16 +5,15 @@ using namespace std;
 
 #define forn(i, a, b) for (int i = a; i < b; i++)
 
-bool binarySearch(vector<int> &arr, int elem) {
+// find first element that greater or equal to elem
+int findFirstElementGreaterOrEqual(vector<int> &arr, int elem) {
     int n = int(arr.size());
-    int k = 0;
+    int k = -1;
     for (int a = n / 2; a > 0; a /= 2) {
-        while (k + a < n && arr[k + a] <= elem) k += a;
+        while (k + a < n && arr[k + a] < elem) k += a;
     }
 
-    if (arr[k] == elem) return true;
-
-    return false;
+    return k + 1;
 }
 
 int main() {
@@ -35,6 +34,11 @@ int main() {
     cin >> elem;
 
     sort(arr.begin(), arr.end());
+    int index = findFirstElementGreaterOrEqual(arr, elem);
 
-    cout << binarySearch(arr, elem);
+    if (index < N) {
+        cout << arr[index];
+    } else {
+        cout << elem << " is greater than all elements";
+    }
 }

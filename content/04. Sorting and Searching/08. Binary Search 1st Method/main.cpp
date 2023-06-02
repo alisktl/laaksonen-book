@@ -7,13 +7,13 @@ using namespace std;
 
 bool binarySearch(vector<int> &arr, int elem) {
     int n = int(arr.size());
-    int a = 0, b = n-1;
+    int a = 0, b = n - 1;
 
-    while(a <= b) {
-        int m = b - (b-a)/2;
-        if(arr[m] == elem) return true;
-        else if(elem < arr[m]) b = m-1;
-        else a = m+1;
+    while (a <= b) {
+        int m = b - (b - a) / 2;
+        if (arr[m] == elem) return true;
+        else if (elem < arr[m]) b = m - 1;
+        else a = m + 1;
     }
 
     return false;
